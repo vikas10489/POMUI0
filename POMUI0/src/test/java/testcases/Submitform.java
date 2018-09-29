@@ -26,7 +26,7 @@ public class Submitform extends TestBase {
 		CommonUtill fp = new CommonUtill(driver);
 		// driver.navigate().to("http://uitestpractice.com/Students/Form");
 
-		 System.out.println("test");
+		 System.out.println("test2");
 		// confused
 		fp.ClickFormPageTab();
 		try {

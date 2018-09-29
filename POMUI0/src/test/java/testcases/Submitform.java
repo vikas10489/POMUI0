@@ -26,7 +26,7 @@ public class Submitform extends TestBase {
 		CommonUtill fp = new CommonUtill(driver);
 		// driver.navigate().to("http://uitestpractice.com/Students/Form");
 
-		 System.out.println("test2");
+		System.out.println("test2");
 		// confused
 		fp.ClickFormPageTab();
 		try {
@@ -63,19 +63,21 @@ public class Submitform extends TestBase {
 		bg.type("username", "Vikas12");
 		// bg.type("email", "incorrect");
 		bg.type("email", "Vikas12@gmail.com");
-		//doubt page not seen
-		//bg.tab("email");
-		//bg.waitingTime(2000);
+		// doubt page not seen
+		// bg.tab("email");
+		// bg.waitingTime(2000);
 		bg.type("comment_textarea", "Vikas12");
 		bg.type("password", "Vikas12");
-		bg.waitingTime(2000);
+		// bg.waitingTime(2000);
 		bg.clickon("submit_button");
-		bg.waitingTime(2000);
+		// bg.waitingTime(2000);
+		System.out.println("submitted form");
+		System.out.println("logged out");
 
 	}
 
 	public void closeBrowser() {
-		
+
 		driver.quit();
 	}
 }

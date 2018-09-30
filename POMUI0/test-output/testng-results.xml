@@ -2,23 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="89996" started-at="2018-09-29T07:57:04Z" finished-at="2018-09-29T07:58:34Z">
+  <suite name="Default suite" duration-ms="44546" started-at="2018-09-30T12:48:06Z" finished-at="2018-09-30T12:48:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="89996" started-at="2018-09-29T07:57:04Z" finished-at="2018-09-29T07:58:34Z">
+    <test name="Default test" duration-ms="44546" started-at="2018-09-30T12:48:06Z" finished-at="2018-09-30T12:48:51Z">
       <class name="testcases.Submitform">
-        <test-method status="PASS" signature="test(java.util.Hashtable)[pri:0, instance:testcases.Submitform@31d7b7bf]" name="test" duration-ms="89769" started-at="2018-09-29T13:27:04Z" data-provider="getData" finished-at="2018-09-29T13:28:34Z">
+        <test-method status="PASS" signature="test(java.util.Hashtable)[pri:0, instance:testcases.Submitform@3b69e7d1]" name="test" duration-ms="40352" started-at="2018-09-30T18:18:06Z" data-provider="getData" finished-at="2018-09-30T18:18:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ExpectedResult=Success, Author=John Little, First Name=Vikas, Runmode=N, Last Name=Agarwala, Browser=Chrome}]]>
+                <![CDATA[{Marital Status=Married, Username=vikas10489, First Name=Vikas, Comments=comments, Runmode=Y, Email=vikas@gmail.com, Phone Number=8097722449, Password=viks, Date of Birth=10/04/1989, ExpectedResult=Success, Hobbies=Dancing, Browser=Chrome, Country=India, Last Name=Agarwala}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.Submitform@3b69e7d1]" name="closeBrowser" is-config="true" duration-ms="4023" started-at="2018-09-30T18:18:47Z" finished-at="2018-09-30T18:18:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.Submitform -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -24,7 +24,7 @@ public class DataUtil {
 		}
 		System.out.println("Total rows are  - "+rows );
 		
-		//calculate total cols
+		//calculate total columns
 		int cols=0;
 		while(!xls.getCellData(sheetName, cols, colStartRowNum).equals("")){
 			cols++;

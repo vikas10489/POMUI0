@@ -1,6 +1,5 @@
 package testcases;
 
-import java.text.SimpleDateFormat;
 import java.util.Hashtable;
 
 import org.openqa.selenium.By;
@@ -20,9 +19,9 @@ import pages.FormPage;
 import basepage.BasePage;
 import testbase.TestBase;
 
-import java.text.DateFormat;
+//import java.text.DateFormat;
 import java.text.ParseException;
-//import java.text.SimpleDateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Submitform extends TestBase {
@@ -33,15 +32,14 @@ public class Submitform extends TestBase {
 	}
 	@Test(dataProvider="getData")
 	public void test(Hashtable<String, String> data) {
-		
-		
+			
 		test = extent.startTest(testCaseName);
 		test.log(LogStatus.INFO, "Logging In..");
 		openBrowser(data.get("Browser"));
 		CommonUtill fp = new CommonUtill(driver);
-		// driver.navigate().to("http://uitestpractice.com/Students/Form");
+		//driver.navigate().to("http://uitestpractice.com/Students/Form");
 
-		System.out.println("test2");
+		//System.out.println("test2");
 		// confused
 		fp.ClickFormPageTab();
 		try {
@@ -51,20 +49,21 @@ public class Submitform extends TestBase {
 		}
 		
 	}
-
+	//@Test(dataProvider="getData")
 	public void enterFormDetails(Hashtable<String, String> data) {
 		BasePage bg = new BasePage(driver);
+		System.out.println("test2");
 		bg.type("firstname", data.get("First Name"));
 
 		//bg.waitingTime(1000);
 		bg.type("lastname", data.get("Last Name"));
-		if(data.get("marital_status").equals("Married")){
+		if(data.get("Marital Status").equals("Married")){
 			bg.clickon("maritalstatus_married");			
 		}else{
 		bg.clickon("maritalstatus_single");
 		}
 		// implement multiple hobbies is pending
-		if(data.get("hobbies").equals("Dancing")){
+		if(data.get("Hobbies").equals("Dancing")){
 			bg.clickon("hobbies_read");			
 		}else{
 			bg.clickon("hobbies_dance");
@@ -74,24 +73,30 @@ public class Submitform extends TestBase {
 		bg.clickon("country_listbox");
 		bg.selectdropdown("country_listbox", data.get("Country"));
 		bg.clickon("datepicker");
-		String dob = data.get("Country");
 		//Date date = new Date();  
 		//convert string to date with ddMMyyyy format example "14092011"
         //String ddMMyyyy = "14092011";
         //formatter =new SimpleDateFormat("ddMMyyyy");
         //convertedDate =(Date) formatter.parse(ddMMyyyy);
         //System.out.println("Date from ddMMyyyy String in Java : " + convertedDate);
-
-	    SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");  
+		/*
+		String dob = data.get("Date of Birth");
+		System.out.println(dob);
+		String[] arrOfStr = dob.split("/", 4);
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");  
 	    String strDate = formatter.format(dob);  
+	    System.out.println(strDate);
+	    System.out.println(dob);
 	    System.out.println("dob with dd/MMM/yyyy : "+ strDate);  
-	    String[] arrOfStr = strDate.split("/", 2); 
-		bg.selectdropdown("datepicker_month", arrOfStr[1]);
-		bg.selectdropdown("datepicker_year", arrOfStr[2]);
+	    String[] arrOfStr2 = strDate.split("/", 4); 
+		*/
+		bg.selectdropdown("datepicker_month", "Apr");
+		bg.selectdropdown("datepicker_year", "1989");
 		// how to enter date dynamically from runtime date
 		bg.clickon("datepicker_day");
 
 		// bg.type("phone_number", "incorrect");
+		//not able to read numeric value i am sending the data like '8097722449
 		bg.type("phone_number", data.get("Phone Number"));
 		bg.type("username", data.get("Username"));
 		// bg.type("email", "incorrect");

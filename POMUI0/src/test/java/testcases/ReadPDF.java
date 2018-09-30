@@ -19,6 +19,7 @@ import org.testng.annotations.Test;
 
 public class ReadPDF {
 	
+	
 	// doubt why main function why not public static void readfile{}
 	public static void main(String[] args) throws IOException {
 

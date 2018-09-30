@@ -54,6 +54,7 @@ public class BasePage {
 	public void type(String objRepoKey, String value) {
 		getelement(objRepoKey).sendKeys(value);
 	}
+
 	public void tab(String objRepoKey) {
 		getelement(objRepoKey).sendKeys(Keys.TAB);
 	}
@@ -67,6 +68,7 @@ public class BasePage {
 			e.printStackTrace();
 		}
 	}
+
 	public void SelectMultipleValue(String objRepoKey, String value1, String value2) {
 		Select sel = new Select(getelement(objRepoKey));
 		if (sel.isMultiple()) {
@@ -97,13 +99,8 @@ public class BasePage {
 
 	public void SelectValue(String objRepoKey, String value1) {
 		Select sel = new Select(getelement(objRepoKey));
-		if (sel.isMultiple()) {
-		} else {
-			sel.selectByVisibleText(value1);
-		}
-
+		sel.selectByVisibleText(value1);
 	}
-
 
 	public void selectdropdown(String objRepoKey, String value) {
 		Select dropdown = new Select(getelement(objRepoKey));

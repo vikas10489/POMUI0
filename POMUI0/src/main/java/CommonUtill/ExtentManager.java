@@ -5,7 +5,7 @@ import java.util.Date;
 
 import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
-
+//i need to copy and write in system.
 public class ExtentManager {
 	private static ExtentReports extent;
 

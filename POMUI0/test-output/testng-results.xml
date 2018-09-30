@@ -2,16 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38473" started-at="2018-09-29T06:45:15Z" finished-at="2018-09-29T06:45:53Z">
+  <suite name="Suite" duration-ms="89996" started-at="2018-09-29T07:57:04Z" finished-at="2018-09-29T07:58:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38473" started-at="2018-09-29T06:45:15Z" finished-at="2018-09-29T06:45:53Z">
+    <test name="Test" duration-ms="89996" started-at="2018-09-29T07:57:04Z" finished-at="2018-09-29T07:58:34Z">
       <class name="testcases.Submitform">
-        <test-method status="PASS" signature="test()[pri:0, instance:testcases.Submitform@675d3402]" name="test" duration-ms="38364" started-at="2018-09-29T12:15:15Z" finished-at="2018-09-29T12:15:53Z">
+        <test-method status="PASS" signature="test(java.util.Hashtable)[pri:0, instance:testcases.Submitform@31d7b7bf]" name="test" duration-ms="89769" started-at="2018-09-29T13:27:04Z" data-provider="getData" finished-at="2018-09-29T13:28:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ExpectedResult=Success, Author=John Little, First Name=Vikas, Runmode=N, Last Name=Agarwala, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
       </class> <!-- testcases.Submitform -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -27,8 +27,6 @@ import java.util.Date;
 
 public class controltest extends TestBase {
 	public String testCaseName = "FormTest";
-	BasePage bg = new BasePage(driver);
-
 	@DataProvider
 	public Object[][] getData() {
 		return DataUtil.getData(xls, testCaseName);
@@ -58,12 +56,17 @@ public class controltest extends TestBase {
 		}
 	}
 
-	@Test(dataProvider = "getData")
-	public void enterSelectDetails(Hashtable<String, String> data) {
+	//@Test(dataProvider = "getData")
+	public void enterSelectDetails(Hashtable<String, String> data) throws InterruptedException {
 		// TODO Auto-generated method stub
+		BasePage bg = new BasePage(driver);
+		
 		System.out.println("enterSelectDetails");
-		// bg.SelectValue("countriessingle_listbox", "India");
+		bg.SelectValue("countriessingle_listbox", "India");
+		bg.wait(1000);
 		bg.SelectMultipleValue("countries_multiple", "India", "China");
+		bg.wait(1000);
 		bg.SelectValue("countries_button", "India");
+		bg.wait(1000);
 	}
 }

@@ -27,7 +27,6 @@ import java.util.Date;
 
 public class Submitform extends TestBase {
 	public String testCaseName = "FormTest";
-	BasePage bg = new BasePage(driver);
 
 	@DataProvider
 	public Object[][] getData() {
@@ -59,6 +58,7 @@ public class Submitform extends TestBase {
 
 	@Test(dataProvider = "getData")
 	public void enterFormDetails(Hashtable<String, String> data) {
+		BasePage bg = new BasePage(driver);
 		System.out.println("enterFormDetails");
 		bg.type("firstname", data.get("First Name"));
 

@@ -15,7 +15,7 @@ import CommonUtill.Xls_Reader;
 public class TestBase {
 	public WebDriver driver;
 	public String userDir=System.getProperty("user.dir");
-	public Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"//Data/data.xlsx");;
+	public Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir")+"//Data/Data.xlsx");;
 	public ExtentReports extent = ExtentManager.getInstance();
 	public ExtentTest test;
 	public void openBrowser(String btype) {

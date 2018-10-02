@@ -6,4 +6,15 @@
       <class name="testcases.Submitform"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testcases.Submitform">
+        <methods>
+          <include name="enterSelectDetails" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="enterFormDetails" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.Submitform -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

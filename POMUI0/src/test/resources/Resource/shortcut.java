@@ -1,4 +1,4 @@
-package CommonUtill;
+package Resource;
 
 public class shortcut {
 	/*

@@ -40,11 +40,11 @@ public class BasePage {
 	}
 
 	public WebElement getelement(String objRepoKey) {
-		return driver.findElement(By.xpath(pro.getProperty((objRepoKey))));
+		return driver.findElement(By.xpath(pro.getProperty(objRepoKey)));
 	}
 
 	public List<WebElement> getelements(String objRepoKey) {
-		return driver.findElements(By.xpath(pro.getProperty((objRepoKey))));
+		return driver.findElements(By.xpath(pro.getProperty(objRepoKey)));
 	}
 
 	public void clickon(String objRepoKey) {
@@ -102,7 +102,7 @@ public class BasePage {
 		sel.selectByVisibleText(value1);
 	}
 
-	public void selectdropdown(String objRepoKey, String value) {
+	public void dropdown(String objRepoKey, String value) {
 		Select dropdown = new Select(getelement(objRepoKey));
 		dropdown.selectByVisibleText(value);
 		// dropdown.selectByIndex(0);

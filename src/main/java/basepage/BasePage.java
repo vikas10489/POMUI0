@@ -72,6 +72,7 @@ public class BasePage {
 	public void SelectMultipleValue(String objRepoKey, String value1, String value2) {
 		Select sel = new Select(getelement(objRepoKey));
 		if (sel.isMultiple()) {
+			System.out.println("selected value is mutiple selection" );
 			List<WebElement> optionslist = sel.getOptions();
 			int count = optionslist.size();
 			sel.getAllSelectedOptions();
@@ -90,6 +91,10 @@ public class BasePage {
 				}
 
 			}
+			List<WebElement> s1 = sel.getAllSelectedOptions();
+			for (WebElement webelementtemp:s1){
+				System.out.println("selected value is" + s1);
+			}
 		} else {
 			sel.selectByVisibleText(value1);
 
@@ -97,14 +102,11 @@ public class BasePage {
 
 	}
 
-	public void SelectValue(String objRepoKey, String value1) {
-		Select sel = new Select(getelement(objRepoKey));
-		sel.selectByVisibleText(value1);
-	}
 
 	public void dropdown(String objRepoKey, String value) {
 		Select dropdown = new Select(getelement(objRepoKey));
 		dropdown.selectByVisibleText(value);
+
 		// dropdown.selectByIndex(0);
 		// dropdown.selectByValue(value);
 	}
@@ -133,6 +135,65 @@ public class BasePage {
 		 */
 		driver.navigate().to(driver.getCurrentUrl());
 	}
+	public void bootstrapbuttonDropdown(String objRepoKey, String objRepoKey_value) throws InterruptedException {
+		getelement(objRepoKey).click();
+		getelement(objRepoKey_value).click();
+		String S1 = getelement(objRepoKey).getText();
+		System.out.println(S1);
+		Thread.sleep(2000);
+	}
+
+	public void SelectValue(String objRepoKey, String value1) {
+		Select sel = new Select(getelement(objRepoKey));
+		sel.selectByVisibleText(value1);
+		List<WebElement> s1 = sel.getAllSelectedOptions();
+		for (WebElement webelementtemp:s1){
+			System.out.println("selected value is " + s1);
+		}
+	}
+
+	public void selectdropdown(String objRepoKey, String value) {
+		Select dropdown = new Select(getelement(objRepoKey));
+		dropdown.selectByVisibleText(value);
+		// dropdown.selectByIndex(0);
+		// dropdown.selectByValue(value);
+	}
+
+	public void Dropdown(String objRepoKey, String value1) throws InterruptedException {
+		Select sel = new Select(getelement(objRepoKey));
+		sel.selectByVisibleText(value1);
+		/*keys over*/
+		List<WebElement> webelement = sel.getOptions();
+		System.out.println(webelement.size());
+		for (WebElement webelementtemp : webelement) {
+			System.out.println(webelementtemp.getText());
+		}
+		boolean ismultiple= sel.isMultiple();
+		System.out.println("ismultiple=" + ismultiple);
+		sel.getFirstSelectedOption();
+		System.out.println("First selected option is"+getelement(objRepoKey).getText());
+		sel.selectByIndex(0);
+		System.out.println("after select a value"+getelement(objRepoKey).getText());
+		sel.deselectByIndex(0);
+		System.out.println("after deselect the value"+getelement(objRepoKey).getText());
+		//to print multiple select values from multiple select drop down
+		List<WebElement> webelement2 = sel.getAllSelectedOptions();
+		System.out.println(webelement2.size());
+		for (WebElement webelementtemp : webelement2) {
+			System.out.println(webelementtemp.getText());
+		}
+		/*keys over*/
+		sel.selectByVisibleText(value1);		
+		Thread.sleep(2000);
+	}
+
+	public void MultiSelectDropdown(String objRepoKey, String objRepoKey_value) throws InterruptedException {
+		Select sel = new Select(getelement(objRepoKey));
+		sel.selectByVisibleText(objRepoKey_value);
+		Thread.sleep(2000);
+	}
+	// ---------------------
+
 
 	public void doubleClick(String objRepoKey) {
 		Actions action = new Actions(driver);

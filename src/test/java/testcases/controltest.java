@@ -31,6 +31,7 @@ public class controltest extends TestBase {
 	public Object[][] getData() {
 		return DataUtil.getData(xls, testCaseName);
 	}
+	
 
 	@Test(dataProvider = "getData")
 	public void Test(Hashtable<String, String> data) {
